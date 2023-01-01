@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Axios</title>
+  <title>Document</title>
 </head>
 <body>
   <div id="app">
@@ -14,26 +15,26 @@
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script>
     new Vue({
       el: '#app',
       data: {
-        users: []
+        users: [],
       },
       methods: {
-        getData: function() { 
+        getData: function () {
           var vm = this;
           axios.get('https://jsonplaceholder.typicode.com/users/')
-            .then(function(response) {
+            .then(function (response) {
               console.log(response.data);
               vm.users = response.data;
             })
-            .catch(function(error) {
+            .catch(function (error) {
               console.log(error);
             });
-        }
+        },
       }
     })
   </script>

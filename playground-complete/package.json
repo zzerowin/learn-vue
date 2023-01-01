@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "parcel": "^2.8.2",
+    "vue-router": "^4.1.6"
+  }
+}
